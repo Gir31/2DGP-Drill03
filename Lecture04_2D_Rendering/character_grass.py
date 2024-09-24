@@ -9,7 +9,7 @@ boy = load_image('character.png')
 def draw_boy(x, y):
     clear_canvas_now()
     boy.draw_now(x, y)
-    delay(0.1)  
+    delay(0.05)  
 
 def run_top():
     print('TOP')
@@ -19,6 +19,8 @@ def run_top():
 
 def run_right():
     print('RIGHT')
+    for y in range(550, 0, -10):
+        draw_boy(800, y)
     pass
 
 def run_bottom():
@@ -53,7 +55,7 @@ def run_circle():
 
 
 while (True):
-    run_circle()
+    #run_circle()
     run_rectangle()
     break
 
