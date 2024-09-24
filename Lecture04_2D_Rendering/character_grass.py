@@ -35,10 +35,18 @@ def run_left():
         draw_boy(0, y)
     pass
 
-def run_left_hypotenuse():
-    print('LEFT HYPOTENUSE')
+def triangle_left():
+    print('TRIANGLE LEFT')
     for h in range(0, 400, 4):
         draw_boy(h, h)
+    pass
+
+def triangle_right():
+    print('TRIANGLE RIGHT')
+    cx, cy = 400, 400
+    for h in range(0, 400, 4):
+        x, y = cx + h, cy - h
+        draw_boy(x, y)
     pass
 
 def run_rectangle():
@@ -65,8 +73,8 @@ def run_circle():
 def run_triangle():
     print('TRIANGLE')
     #run_bottom()
-    run_left_hypotenuse()
-    #run_right_hypotenuse()
+    triangle_left()
+    triangle_right()
     pass
 
 
