@@ -1,5 +1,10 @@
 from pico2d import *
 import math
+    
+open_canvas()
+
+grass = load_image('grass.png')
+boy = load_image('character.png')
 
 def run_rectangle():
     print('RECTANGLE')
@@ -7,15 +12,18 @@ def run_rectangle():
 
 def run_circle():
     print('CIRCLE')
-    pass
     
-open_canvas()
+    clear_canvas_now()
+    boy.draw_now(400, 90)
+    delay(1)
+    
+    pass
 
-grass = load_image('grass.png')
-boy = load_image('character.png')
+
 
 while (True):
     run_rectangle()
     run_circle()
+    break
 
 close_canvas()
